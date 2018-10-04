@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="../css/bootstrap-treeview.css" rel="stylesheet">
+    <style>
+        body {
+            font-size:13px;
+        }
+        .container {
+            padding-right: 5px; /*15px in bootstrap.css*/
+            padding-left: 5px;  /*idem*/
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+
+<button id="buttonInitApp" type="submit" style="display:none;">Init GD files</button>
+<button id="buttonGetFiles" type="submit" style="display:none;">Get GD Files</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button id="buttonCreate" type="submit" style="display:none;">Create</button>
+<button id="buttonRename" type="submit" style="display:none;">Rename</button>
+<button id="buttonDelete" type="submit" style="display:none;">Delete</button>
+<button id="buttonRead" type="submit" style="display:none;">Read</button>
+<button id="buttonSearch" type="submit" style="display:none;">Search</button>
+<button id="buttonCopy" type="submit" style="display:none;">Copy</button>
+
+<button id="buttonDownload" type="submit" style="display:none;">Download DB</button>
+
+<!--<a id="linkDownload" href="" download="db_nodes.csv" style="display:none;">Download DB</a>-->
+<br/><br/>
+
+<div id="treeview" class=""></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../js/bootstrap-treeview-patternfly.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.0/system.js"></script>
+<script src="../js/lovefield.min.js"></script>
+<script src="../js/papaparse.min.js"></script>
+<script>
+    function init() {
+        SystemJS.config({
+            baseURL: "/org_html/jq_proba",
+            packages: {
+                "/": {defaultExtension: "js"}
+            }
+        });
+        System.import("app.js");
+    }
+</script>
+<!--<script src="app.js"></script>-->
+
+<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};init()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${node.name}</title>
+    <link id="mainIcon" rel="shortcut icon" type="image/png" href="/icon/${node.icon}"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        .container {
+            padding-right: 5px; /*15px in bootstrap.css*/
+            padding-left: 5px;  /*idem*/
+            margin-right: auto;
+            margin-left: auto;
+        }
+        html, body, .container {
+            height: 100%;
+        }
+        .progress {
+            display: block;
+            text-align: center;
+            width: 0;
+            height: 3px;
+            background: red;
+            transition: width .3s;
+        }
+        /*.progress.hide {*/
+        /*opacity: 0;*/
+        /*transition: opacity 1.3s;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="container p-0 m-0">
+    <div class="progress hide"></div>
+
+
+
+
+
+
+
+    <table style="width:100%; height:100%;">
+        <tr style="height:1px;">
+            <td>
+                <button id="button-save" type="button" class="btn btn-primary">&nbsp&nbsp&nbspSave&nbsp&nbsp&nbsp</button>
+            </td>
+            <td style="text-align: right;">
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle glyphicon glyphicon-menu-hamburger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!--<span class="caret"></span>-->
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#" onclick="fontMin()">Font size: -1</a></li>
+                        <li><a href="#" onclick="fontMax()">Font size: +1</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" onclick="colorWhite()">Theme: White</a></li>
+                        <li><a href="#" onclick="colorBlack()">Theme: Black</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" onclick="textWrap()">Text wrap: on/off</a></li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height:1%;">
+                <span id="span-result"></span>
+
+
+
+                <h5>
+                    <img id="nodeIcon" src="/icon/${node.icon}" style="width:16px; height:16px;" />
+                    <span id="nodeName">${node.name}</span>
+                </h5>
+
+
+
+
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea id="textarea" wrap="soft" style="width:100%; height:100%;">${file}</textarea>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.0/system.js"></script>
+<script>
+    function init() {
+        SystemJS.config({
+            baseURL: "/org_html/jq_proba",
+            packages: {
+                "/": {defaultExtension: "js"}
+            }
+        });
+        System.import("opentxt.js");
+    }
+    init();
+</script>
+
+</body>
+</html>
+
+
+
