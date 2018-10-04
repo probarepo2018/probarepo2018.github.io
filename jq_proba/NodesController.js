@@ -126,7 +126,7 @@ var NodesController = /** @class */ (function () {
                                 order: node.order,
                                 text: node.name,
                                 type: node.type,
-                                image: "/org_html/icon/" + node.icon
+                                image: "/icon/" + node.icon
                             };
                             if (mapId2CountChildren.get(node.id) > 0)
                                 newObj.lazyLoad = true;
