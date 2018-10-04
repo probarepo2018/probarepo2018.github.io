@@ -154,9 +154,9 @@ var GoogleDriveInit = /** @class */ (function () {
     };
     GoogleDriveInit.getInitDatabaseCsv = function () {
         var sResult = ''; // '"id","parent_id","order","name","type","icon","params","file"\n';
-        sResult += '1,0,0,"Desktop","txt","_default/1354318755_icons.png","","' + GoogleDriveInit.desktopFileId + '"\n';
-        sResult += '2,1,0,"Settings","txt","_default/settings-5.png","","' + GoogleDriveInit.settingsFileId + '"\n';
-        sResult += '3,1,1,"Recycle Bin","txt","_default/trash-icon.png","","' + GoogleDriveInit.recycleBinFileId + '"';
+        sResult += '1,0,0,"Desktop","txt","default/1354318755_icons.png","","' + GoogleDriveInit.desktopFileId + '"\n';
+        sResult += '2,1,0,"Settings","txt","default/settings-5.png","","' + GoogleDriveInit.settingsFileId + '"\n';
+        sResult += '3,1,1,"Recycle Bin","txt","default/trash-icon.png","","' + GoogleDriveInit.recycleBinFileId + '"';
         return sResult;
     };
     GoogleDriveInit.appFolderName = 'Org ::::: Documents';
