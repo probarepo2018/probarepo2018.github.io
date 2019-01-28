@@ -39,13 +39,27 @@
     </style>
 </head>
 <body>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <table>
+        <tr>
+            <td>
+                <img id="pic" class="img-circle" width="28" height="28" />
+                <p id="email" class="alert alert-danger"></p>
+            </td>
+            <td>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+            </td>
+        </tr>
+    </table>
+    
+    
+    
     <div class="data">
         <p>Profile Details</p>
-        <img id="pic" class="img-circle" width="28" height="28" />
+        
         <p>Email Address</p>
-        <p id="email" class="alert alert-danger"></p>
-        <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+        
+        
     </div>
 
 
